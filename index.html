@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="styles.ss">
+</head>
+<body>
+  <script>
+    function getOppChoice(){
+      let x =  Number(Math.random().toFixed(5));
+      x = x * 100000;
+      x = x % 3;
+      switch(x){
+        case 0:
+          return "rock";
+          break;
+        case 1:
+          return "paper";
+          break;
+        case 2:
+          return "scissors";
+      }
+    }
+
+    function getUserChoice(){
+      let choice;
+      while(1){
+        choice = prompt("Type a number!\n1. Rock   |   2. Paper   |   3. Scissors");
+        switch(choice){
+          case "1": 
+            return "Rock";
+          case "2": 
+            return "Paper";
+          case "3": 
+            return "Scissors";
+          default: 
+            break;
+        }   
+      }
+    }
+
+    let UserScore;
+    let OppScore;
+    console.log(getOppChoice());
+    console.log(getUserChoice());
+  </script>
+</body>
+</html>
